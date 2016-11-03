@@ -1,19 +1,20 @@
 name := "scaldi"
-organization := "org.scaldi"
-version := "0.5.8-SNAPSHOT"
+organization := "org.skinny-framework.org.scaldi"
+version := "0.5.8-M1"
 
 description := "Scaldi - Scala Dependency Injection Library"
 homepage := Some(url("http://scaldi.org"))
 licenses := Seq("Apache License, ASL Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.0"
+crossScalaVersions := Seq("2.12.0", "2.11.8")
+
 scalacOptions ++= Seq("-deprecation", "-feature")
 
 libraryDependencies ++= Seq(
   "org.scala-lang" % "scala-reflect" % scalaVersion.value,
   "com.typesafe" % "config" % "1.2.1" % "optional",
-
-  "org.scalatest" %% "scalatest" % "2.2.1" % "test"
+  "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 )
 
 fork := true
